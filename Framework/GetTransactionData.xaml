@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1099,2650</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1099,2851</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -108,7 +108,7 @@
       <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="572,2585" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="572,2786" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -116,14 +116,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Get Transaction Item" sap:VirtualizedContainerService.HintSize="510,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Get the transaction item&quot;]" />
-    <ui:RetryScope DisplayName="Retry Get transaction item" sap:VirtualizedContainerService.HintSize="510,786" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberGetTransactionItem&quot;))]">
+    <ui:RetryScope DisplayName="Retry Get transaction item" sap:VirtualizedContainerService.HintSize="510,987" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Cint(in_Config(&quot;RetryNumberGetTransactionItem&quot;))]">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <TryCatch DisplayName="Try Catch Get transaction item" sap:VirtualizedContainerService.HintSize="448,611" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="Try Catch Get transaction item" sap:VirtualizedContainerService.HintSize="448,812" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <TryCatch.Try>
-              <If Condition="[io_dt_TransactionData is Nothing]" sap:VirtualizedContainerService.HintSize="410,383" sap2010:WorkflowViewState.IdRef="If_2">
+              <If Condition="[io_dt_TransactionData is Nothing]" sap:VirtualizedContainerService.HintSize="410,584" sap2010:WorkflowViewState.IdRef="If_2">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,201" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,402" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -136,6 +136,25 @@
                         </OutArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
+                    <ui:FilterDataTable DataTable="[io_dt_TransactionData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,161" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[io_dt_TransactionData]" SelectColumnsMode="Remove">
+                      <ui:FilterDataTable.Filters>
+                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                            <ui:FilterOperationArgument.Column>
+                              <InArgument x:TypeArguments="x:String">["Type"]</InArgument>
+                            </ui:FilterOperationArgument.Column>
+                            <ui:FilterOperationArgument.Operand>
+                              <InArgument x:TypeArguments="x:String">["WI4"]</InArgument>
+                            </ui:FilterOperationArgument.Operand>
+                          </ui:FilterOperationArgument>
+                        </scg:List>
+                      </ui:FilterDataTable.Filters>
+                      <ui:FilterDataTable.SelectColumns>
+                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                          <x:Null />
+                        </scg:List>
+                      </ui:FilterDataTable.SelectColumns>
+                    </ui:FilterDataTable>
                   </Sequence>
                 </If.Then>
                 <If.Else>
