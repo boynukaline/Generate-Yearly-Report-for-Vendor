@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1202,2091</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1202,2288</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Acme_UploadReports_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -106,19 +106,19 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Acme_UploadReports" sap:VirtualizedContainerService.HintSize="592,2026" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Acme_UploadReports" sap:VirtualizedContainerService.HintSize="592,2223" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Upload Yearly Report" sap:VirtualizedContainerService.HintSize="530,1915" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="19f9f404-23f8-45db-82e7-f629c95dbb9b" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Upload Yearly Report" sap:VirtualizedContainerService.HintSize="530,2112" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="19f9f404-23f8-45db-82e7-f629c95dbb9b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1698" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1895" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -128,7 +128,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" CvElementArea="466, 477, 489, 37" CvType="InputBox" DesignTimeRectangle="468, 479, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT vendorTaxID'" FullSelectorArgument="&lt;webctrl id='vendorTaxID' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='vendorTaxID' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="f90b7e72-3f7b-4104-a3d9-68052e8cf4ce" InformativeScreenshot="1f25c29b85ce7bced9eb90f2fa071750.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CvTextArea="466, 457, 95, 13" CvTextArgument="Vendor TaxID:" CvType="Text" DesignTimeRectangle="468, 454, 93, 20" ElementType="Text" FriendlyName="'Vendor TaxID'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Vendor TaxID:' check:innerText='Vendor TaxID:' /&gt;" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -144,10 +144,10 @@
                 </scg:List>
               </uix:NSelectItem.Items>
               <uix:NSelectItem.Target>
-                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="468, 553, 220, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='button' class='btn dropdown-toggle bs-placeholder btn-default' aaname='---' check:innerText='---' /&gt;" Guid="2377160b-2c64-4bf9-bcae-a7a434d73be8" InformativeScreenshot="12638c72151af742ef5bffe04f3326ad.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/upload" DesignTimeRectangle="468, 443, 220, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='button' class='btn dropdown-toggle bs-placeholder btn-default' /&gt;" Guid="2377160b-2c64-4bf9-bcae-a7a434d73be8" ImageBase64="" InformativeScreenshot="839d942e311287ae51ed674fb4a3abd7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Upload Yearly Report' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CvElementArea="466, 552, 223, 36" CvType="InputBox" DesignTimeRectangle="481, 560, 181, 20" ElementType="Text" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl parentid='searchForm' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='searchForm' tag='SPAN' type='' class='filter-option pull-left' aaname='---' check:innerText='---' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="466, 421, 36, 13" CvTextArgument="Year:" CvType="Text" DesignTimeRectangle="468, 418, 34, 20" ElementType="Text" FriendlyName="'Year'" FullSelectorArgument="&lt;webctrl aaname='Year:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Year:' tag='LABEL' type='' class='' check:innerText='Year:' /&gt;" SearchSteps="FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -162,7 +162,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable CvElementArea="194, 464, 543, 26" CvType="InputBox" DesignTimeRectangle="201, 470, 514, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="ffabf34d-aed0-4788-8630-d271d8937190" InformativeScreenshot="99c993ba2d5ba683e0ebdae3d575dfe6.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CvTextArea="137, 470, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="138, 469, 54, 15" ElementType="Text" FriendlyName="'File &amp;name'" FullSelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' check:text='File &amp;amp;name:' /&gt;" SearchSteps="Selector, FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -184,6 +184,11 @@
                 <uix:TargetAnchorable DesignTimeRectangle="760, 118, 416, 36" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Report was'" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='Report was uploaded - confirmation id is *' role='text' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="5984f29f-d394-4d83-a930-a9dfe7e9fc06" ImageBase64="" InformativeScreenshot="5580a004b2121d4c4eecb49a66c4d89d.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Upload Yearly Report - Personal - Microsoft​ Edg*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NGetText.Target>
             </uix:NGetText>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'push button OK'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="19f9f404-23f8-45db-82e7-f629c95dbb9b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="1111, 168, 66, 35" CvTextArea="1133, 179, 20, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1112, 170, 64, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'push button OK'" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' /&gt;" Guid="7468575d-9212-46c0-92c7-2c5be651b270" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAkCAYAAAAw55zoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVGhD7Zo9SkNBFEazA12O4Abch4vQTks3oHY2toKFhWBlIVhpFRSEaAqFgCghQSIGHfkm9wwvj5cyl5DcAx9hfsJjTmbmZfLSSsEUIaTGlJCLx0HaPH5O6/sPqbXbXupojBqrxlylCDlvDxrfuArR2KEI2TjsNHZehWjsUISs7S3/MpkVjR2KkKaOqxQIIRYIIRYIIRYIIRYIIRYIIRZwFXL1NEz90W++3vf4L5er7YK6rZNu7vvy+TPVZ14BNyE33a8i4eD6PZ3e93P57nVU+giEqF7tEkP7PAMuQrbP3vI1JKFaf3T7ket3Lnu5LCSEeomr9p9nwEUIh6emNsHBUjAzvA+b4CJEn/qsawiWiZAM4bVUCCzcDNFe47mZEnARoj1CzNpDtMeoLDRb6M/M8Qi4CFHYGySlepfRjKCPQALLzGtjBTchigbJ9xC91meAqNb1hmO3Wy+4ClnkQAixQAixQAixQAixQAixQAixQAixQBESD6omFCHxKHNCEeL9+8MihdO4KEJE/B2iJiQIITVS+geKKB/srt6CCQAAAABJRU5ErkJggg==" InformativeScreenshot="2de965dc4c00596b7daf11f840798879.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Upload Yearly Report - Personal - Microsoft​ Edg*' /&gt;" SearchSteps="Selector, Image, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
             <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[out_UploadID]</OutArgument>

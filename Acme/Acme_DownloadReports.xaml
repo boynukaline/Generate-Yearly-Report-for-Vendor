@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Acme_DownloadReports" this:Acme_DownloadReports.in_TaxID="RO212121" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Acme_DownloadReports" this:Acme_DownloadReports.in_TaxID="DE987564" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_TaxID" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1202,4223</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1202,4315</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Acme_DownloadReports_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,19 +115,19 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Acme_DownloadReports" sap:VirtualizedContainerService.HintSize="1210,4158" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Acme_DownloadReports" sap:VirtualizedContainerService.HintSize="1210,4250" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Download Monthly Report" sap:VirtualizedContainerService.HintSize="1148,4047" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="73398c40-60ee-42a8-bec0-234b2b0d9fbf" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Download Monthly Report" sap:VirtualizedContainerService.HintSize="1148,4139" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="73398c40-60ee-42a8-bec0-234b2b0d9fbf" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1114,3830" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1114,3922" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="months" />
               <Variable x:TypeArguments="s:String[]" Name="arr_Months" />
@@ -196,13 +196,13 @@
                 <InArgument x:TypeArguments="s:String[]">[months.Split()]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1052,2569" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arr_Months]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1052,2661" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arr_Months]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="month" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1018,2383" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1018,2475" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -241,7 +241,7 @@
                         <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/download" CvElementArea="466, 560, 136, 37" CvTextArea="480, 570, 111, 17" CvTextArgument="Download Report" CvType="Button" DesignTimeRectangle="468, 561, 134, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Download Report'" FullSelectorArgument="&lt;webctrl id='buttonDownload' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buttonDownload' tag='BUTTON' type='button' class='btn btn-primary' aaname='Download Report' check:innerText='Download Report' /&gt;" Guid="b0eb49b0-e0f8-44ac-bbfd-04902344e33b" InformativeScreenshot="10774b6f7e9834ca9d78ac9b0d8e751c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NCheckState DisplayName="Check App State 'No report'" sap:VirtualizedContainerService.HintSize="976,1901" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="73398c40-60ee-42a8-bec0-234b2b0d9fbf" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'No report'" sap:VirtualizedContainerService.HintSize="976,1993" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="73398c40-60ee-42a8-bec0-234b2b0d9fbf" Timeout="3" Version="V3">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <sap:WorkflowViewStateService.ViewState>
@@ -251,13 +251,13 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'push button OK'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="73398c40-60ee-42a8-bec0-234b2b0d9fbf" Version="V3">
                             <uix:NClick.Target>
-                              <uix:TargetAnchorable CvElementArea="1111, 168, 66, 35" CvTextArea="1133, 179, 20, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1887, 91, 24, 24" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'push button OK'" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' /&gt;" Guid="57ece45b-802f-44f5-bbfb-26168e50abe5" ImageBase64="" InformativeScreenshot="c147fe6b5fc62ac6319ebae76b44e5dc.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report and 3 more pages - Perso*' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                              <uix:TargetAnchorable CvElementArea="1111, 168, 66, 35" CvTextArea="1133, 179, 20, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1112, 170, 64, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'push button OK'" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' /&gt;" Guid="57ece45b-802f-44f5-bbfb-26168e50abe5" ImageBase64="" InformativeScreenshot="59d5dc418817ee5c6617df6c8fadd259.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report and 3 more pages - Perso*' /&gt;" SearchSteps="Selector" Version="V2" />
                             </uix:NClick.Target>
                           </uix:NClick>
                         </Sequence>
                       </uix:NCheckState.IfExists>
                       <uix:NCheckState.IfNotExists>
-                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="472,1684" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="472,1776" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Boolean" Name="IsFolderExist" />
                             <Variable x:TypeArguments="x:String" Name="ReportName" />
@@ -321,6 +321,46 @@
                               <uix:TargetAnchorable CvElementArea="747, 494, 88, 25" CvTextArea="777, 500, 27, 12" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="747, 494, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" Guid="52edb02b-71e3-4999-8950-c41234a64eb4" InformativeScreenshot="cbff45915946e99074fa3b23cdfd6818.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                             </uix:NClick.Target>
                           </uix:NClick>
+                          <uix:NCheckState DisplayName="Check App State 'Confirm Save As'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="410,52" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="73398c40-60ee-42a8-bec0-234b2b0d9fbf" Timeout="1" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Yes'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="73398c40-60ee-42a8-bec0-234b2b0d9fbf" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable CvElementArea="211, 95, 68, 23" CvTextArea="234, 100, 20, 12" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="211, 95, 68, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'&amp;Yes'" FullSelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' check:text='&amp;amp;Yes' /&gt;" Guid="29538d89-bcc0-4511-8363-214c0fd8c0b9" InformativeScreenshot="ec67d567c3824a5dc54a081c180a37ba.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Confirm Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="0, 0, 366, 130" DesignTimeScaleFactor="1" FriendlyName="'Confirm Save As'" Guid="739f8733-e84a-417a-a1de-0d48d67a9159" InformativeScreenshot="760e29e09838e70b0041258286202871.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Confirm Save As' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.FuzzySelectorArgument>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  </InArgument>
+                                </uix:TargetAnchorable.FuzzySelectorArgument>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
                           <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Toggle navigation ACME'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="73398c40-60ee-42a8-bec0-234b2b0d9fbf" Version="V3">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/download" DesignTimeRectangle="12, 132, 1912, 912" DesignTimeScaleFactor="1" FriendlyName="'Toggle navigation ACME'" FullSelectorArgument="&lt;webctrl tag='BODY' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BODY' type='' class='' aaname='                          ' check:innerText='ACME System 1&amp;#xD;&amp;#xA;Home&amp;#xD;&amp;#xA;Switch to new theme&amp;#xD;&amp;#xA;Log Out&amp;#xD;&amp;#xA;Reports - Download Monthly Report&amp;#xD;&amp;#xA;Home Reports -' /&gt;" Guid="e7c18b9a-f819-4a15-9909-c0d78131229d" InformativeScreenshot="a2b8f3b42722e89855d96e8258b50c74.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
@@ -329,7 +369,13 @@
                         </Sequence>
                       </uix:NCheckState.IfNotExists>
                       <uix:NCheckState.Target>
-                        <uix:TargetAnchorable CvTextArea="759, 121, 409, 16" CvTextArgument="No report found for this vendor / month / year that you have specified." CvType="Text" DesignTimeRectangle="760, 118, 416, 18" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'No report'" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='No report found for this vendor / month / year that you have spe*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='No report found for this vendor / month / year that you have spe*' role='text' automationid='' check:fulltext='No report found for this vendor / month / year that you have specified.' /&gt;" Guid="f2e8669a-13e0-47e0-a9ec-1acb0e8be8d0" InformativeScreenshot="fe13cfb1594c1a3af8031ad848a21e99.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report and 3 more pages - Perso*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                        <uix:TargetAnchorable CvTextArea="759, 121, 409, 16" CvTextArgument="No report found for this vendor / month / year that you have specified." CvType="Text" DesignTimeRectangle="760, 118, 416, 18" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'No report'" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='No report found for this vendor / month / year that you have spe*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='No report found for this vendor / month / year that you have spe*' role='text' automationid='' check:fulltext='No report found for this vendor / month / year that you have specified.' /&gt;" Guid="edc8841e-ae2d-4455-ade5-346266c7c30d" ImageBase64="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" InformativeScreenshot="1bfe4ec05841a4ac398643033f4c8f31.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Download Monthly Report - Personal - Microsoft​ *' /&gt;" SearchSteps="Selector" Version="V2">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvElementArea="1111, 168, 66, 35" CvTextArea="1133, 179, 20, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1111, 168, 66, 35" ElementType="Button" FriendlyName="'push button OK'" FullSelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='acme-test.uipath.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAnCAYAAACyhj57AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIOSURBVGhD7Zq9TsJQGIa5A70LbsHEwUtg5BIcXd10cyJMhtHEQRMWBwZGRhwYGBobTYrBBIhEwRDkx0Bez2kpfQ9tx54Y+Z7kTfpz2uZ74HyHpOQgJCJiUhAxKYiYFGJiau4Ex5UODi+fkDt3/nV0jbpWXfMuhpgHZ5J4g32Irp0xxBxde4kX7UN07Ywh5uDi/0+ftOjaGUNM0gX7FEbEUBgRQ2FEDIURMRRGxFAYEUNhLIvp4up5gcHP5oFY4dX7QLEUnh/BVUfHXj/YLw3R1GNHXygY98kmjEUxLyj31uopK7jOEKd3PVy1vzFQR+bvo03hLKaDyrsa/7PAze3uvbIJY09MdeJLcFtd43j+caaOrtGs6/1ITKG1wFxJbNRejPFZhrEm5qS9VE9Qn/522oT59GUMnDe1vRHTnW4F5Y2x2YaxJubMWwGzKc5i5/poqC9NMH0CMQFL3FuaQmEYa2KKju6iC1Ri54JvzGu7o7bDqfRltemGYez1mPq36hnxHnOieonqsKhX9X7UY/K1KcbhNo3PMow9MeEqw6uSM/OLn/c+NsVHYvQq5k8/3ZgbdhowY1GMSukNZW/pywjQv2OGNF1YjN7vo64XLUtLNmNXzB8PI2IojIihMCKGwogYCiNiKIyIoTAihsIYYuSFW4QhRl7RRhhi5KV+hCFGI38DCYiJEQJETAoiJhHgF3PihobEECLFAAAAAElFTkSuQmCC" SearchSteps="Image, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
                       </uix:NCheckState.Target>
                     </uix:NCheckState>
                   </Sequence>
